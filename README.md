@@ -12,19 +12,11 @@ Built as a learning/portfolio project to demonstrate: document ingestion, vector
 - 100% local — no OpenAI key, no cloud cost
 - Batched embedding ingest with retry (handles ~2,800 chunks reliably)
 
-## Will it run automatically on GitHub?
+## Screenshot
 
-**No.** Pushing to GitHub only stores the **source code**. It does not host or run the app.
+Streamlit web UI — ask questions, view source files, and inspect retrieved doc excerpts:
 
-| What GitHub gives you | What you run locally |
-|-----------------------|----------------------|
-| Public repo + README for portfolio | Ollama (LLM + embeddings) |
-| Clone instructions for others | `python ingest.py` (build search index) |
-| | `streamlit run app.py` (web UI) |
-
-Anyone who clones this repo must install Ollama, point `BNH_REPO_PATH` at the game repo, run ingest, then start the UI on **their** machine.
-
-For a **live public demo URL**, you'd need a separate deploy step (e.g. Hugging Face Spaces with a cloud API instead of local Ollama) — that's Phase 4, not included here.
+![BNH Rules Assistant Streamlit UI](docs/screenshots/streamlit-ui.png)
 
 ## Architecture
 
